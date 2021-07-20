@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Vaccine result</title>
+  </head>
+  <body>
+    <%- include('navbar.ejs'); %>
+    <div class="container d-flex justify-content-center" style="min-height: 300px;">
+      <div class="card my-5" style="width: 54rem;">
+      <% if(mm.length==0){ %>
+         <h2 class="d-flex justify-content-center my-8 text-danger">
+             Oops...no slots found!!!
+         </h2>
+         <style>
+           #ff{
+             position: fixed;
+             bottom: 0px;
+             width: 100%;
+           }
+         </style>
+      <% } else{ %>
+      <% for(var i=0; i < mm.length; i++) { %>
+        
+          <div class="container my-3">
+            <h2 style="background:yellow;">
+                <%= mm[i].name %><span class="mx-3" style="color: black; font-weight: bold;">Address:</span>  <%= mm[i].address %>, <%= mm[i].block_name %>, <%= mm[i].district_name %>, <%= mm[i].state_name %> - <%= mm[i].pincode %>
+            </h2>
+            <div >
+              <div class="accordion-body">
+                <% const aaa=mm[i].sessions %>
+                <!-- <%= JSON.stringify(aaa) %> -->
+                <% for(var j=0; j < aaa.length; j++) { %>
+                <% if(parseInt(aaa[j].available_capacity)>0) { %>
+                <div class="container my-3 bg-info">
+                  <div class="row">
+                    <div class="col-6 col-sm-3">Date: <%= aaa[j].date %></div>
+                    <div class="col-6 col-sm-3">Name: <%= aaa[j].vaccine %></div>
+                    <div class="col-6 col-sm-3">MIN AGE: <%= aaa[j].min_age_limit %></div>
+                    <div class="w-100"></div>
+                    <div class="col-6 col-sm-3">Dose1 availibity: <%= aaa[j].available_capacity_dose1 %></div>
+                    <div class="col-6 col-sm-3">Dose2 availibity: <%= aaa[j].available_capacity_dose2 %></div>
+                    <% if(aaa[j].allow_all_age=='true') { %>
+                    <div class="w-100"></div>
+                    <div class="col-6 col-sm-3">Allowed for all age greater than or equal to <%= aaa[j].min_age_limit %></div>
+                    <% } else{ %>
+                    <div class="w-100"></div>
+                    <div class="col-6 col-sm-3">Not allowed for all age</div>
+                    <% } %>
+                    <a style="text-align: center;" href="https://selfregistration.cowin.gov.in"><button type="button" class="btn btn-primary">Book now</button></a>
+                  </div>
+                </div>
+                <% }} %>
+              </div>
+              
+            </div>
+          </div>
+      <% }} %>
+      </div>
+    </div>
+    <%- include('footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  </body>
+  <style>
+    .my-8{
+        margin-top: 7rem!important;
+        margin-bottom: 7rem!important;
+    }
+    .bg-org{
+      background-color: #E36B1E;
+    }
+    /*#ff{
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+    }*/
+  </style>
+</html>

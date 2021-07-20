@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>About Vaccines</title>
+  </head>
+  <body>
+    <%- include('navbar.ejs'); %>
+    <div class="container bg-dark text-white my-5" style="border-radius: 10px; padding: 20px; opacity: 0.8;">
+      <h1>Vaccination drive in India</h1>
+      After a drastic decline in COVID-19 positive cases at the beginning of the year 2021, India has again witnessed a massive surge in new cases of coronavirus infections, with over 4 lakh cases being reported daily in the past two weeks. Both Central and state governments have ramped up efforts to vaccinate a large number of people above 18 years of age to break the chain of the deadly COVID-19 virus.
+      The government's drug regulator DCGI has so far given approval to two homegrown COVID-19 vaccines - Covishield and Covaxin - and the same are being administered to eligible Indian citizens.
+      <br><br>
+      Besides, Covishield and Covaxin, the Centre has also given approval to Russia's Sputnik V vaccine, which is also considered to be safe and highly effective in combating the deadly COVID-19 virus to a large extent. India aims to vaccinate 250 million "priority people" by the end of July. But experts say that the pace of vaccination has been slow and unless the drive is scaled up, the target could be missed.<br><br><br>
+      <div class="container">
+        <h3>Covaxin develped by Bharat Biotech</h3>
+        <br>
+        <ul>
+          <img class="my-3" src="covaxin.png">
+          <li>Developed by Bharat Biotech, Covaxin is an inactivated vaccine which means that it is made up of killed coronaviruses, making it safe to be injected into the body. Bharat Biotech, a leading vaccine maker of India, used a sample of the coronavirus, isolated by India's National Institute of Virology to develop the anti-COVID jab. When administered, immune cells can still recognise the dead virus, prompting the immune system to make antibodies against the pandemic virus. The two doses of Covaxin are administered in four-week time. The vaccine can be stored at 2C to 8C and has an efficacy rate of 81%. <br></li>
+          <li>Bharat Biotech got the DCGI approval for emergency use in January. The vaccine maker claimed that it has a stockpile of 20 million doses of Covaxin, and is aiming to make 700 million doses out of its four facilities in two cities by the end of the year. On April 24, Bharat Biotech fixed the price of Covaxin at Rs 600 per dose for state governments. However, it later slashed the price to Rs 400.<br></li>
+        </ul>
+        <h3>Serum Institute of India's Covishield</h3>
+        <br>
+        <ul>
+          <img class="my-3" src="covishield.png">
+          <li>The Serum Institute of India (SII), the world's largest vaccine manufacturer, is producing the Oxford-AstraZeneca vaccine locally. The vaccine is made from a weakened version of a common cold virus (known as an adenovirus) from chimpanzees. <br></li>
+          <li>When the vaccine is injected into a patient, it prompts the immune system to start making antibodies and primes it to attack any coronavirus infection. The jab is administered in two doses given between four and 12 weeks apart. It can be safely stored at temperatures of 2C to 8C and can easily be delivered in existing health care settings such as doctors' surgeries.<br></li>
+          <li>The jab developed by Pfizer-BioNTech, which is currently being administered in several countries, must be stored at -70C. According to international trials, the Oxford-AstraZeneca vaccine has an efficacy rate of 90%. <br></li>
+          <li>Serum Institute of India (SII) cut the price of Covishield to Rs 300 from Rs 400 earlier.<br></li>
+        </ul>
+        <h3>Russia's Sputnik V</h3>
+        <br>
+        <ul>
+          <img class="my-3" src="sputnik.png">
+          <li>Sputnik V vaccine has been developed by Moscow's Gamaleya Institute. It uses a cold-type virus, engineered to be harmless, as a carrier to deliver a small fragment of the coronavirus to the body. Safely exposing the body to a part of the virus's genetic code in this way allows it to recognise the threat and learn to fight it off, without the risk of becoming ill. <br></li>
+          
+        </ul>
+      </div>
+    </div>
+    <%- include('footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  </body>
+  <style>
+    .my-8{
+        margin-top: 7rem!important;
+        margin-bottom: 7rem!important;
+    }
+    .bg-org{
+      background-color: #E36B1E;
+    }
+    /*#ff{
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+    } */
+  </style>
+</html>

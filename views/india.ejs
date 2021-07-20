@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>India Stats</title>
+  </head>
+  <body id="bbb">
+    <%- include('navbar.ejs'); %>
+    <div class="container d-flex justify-content-center my-5">
+      <div class="card card1 text-white bg-primary mx-3 mb-3" style="max-width: 15rem;">
+        <div class="card-header">Confirmed</div>
+        <div class="card-body">
+          <h5 class="card-title container" style="font-family: Lobster; font-size:95%;"><%= mm.positive %></h5>
+          <img class="container d-flex justify-content-center" style="height: 60%;width: 60%;" src="corona.jpg"/>
+        </div>
+      </div>
+      <div class="card card2 text-white bg-warning mx-3 mb-3" style="max-width: 15rem;">
+        <div class="card-header">Active</div>
+        <div class="card-body">
+          <h5 class="card-title container" style="font-family: Lobster; font-size:95%;"><%= mm.active %></h5>
+          <img class="container d-flex justify-content-center" style="height: 46%;width: 50%;" src="active.jpg"/>
+        </div>
+      </div>
+      <div class="card card3 text-white mx-3 mb-3" style="background: #66FC04; max-width: 15rem;">
+        <div class="card-header">Recovered</div>
+        <div class="card-body">
+          <h5 class="card-title container" style="font-family: Lobster; font-size:95%;"><%= mm.cured %></h5>
+          <img class="container d-flex justify-content-center" style="height: 60%;width: 60%;" src="cured.png"/>
+        </div>
+      </div>
+      <div class="card card4 text-white bg-danger mx-3 mb-3" style="max-width: 15rem;">
+        <div class="card-header">Deceased</div>
+        <div class="card-body">
+          <h5 class="card-title container" style="font-family: Lobster; font-size:95%;"><%= mm.death %></h5>
+          <img class="container d-flex justify-content-center" style="height: 60%;width: 60%;" src="rip.png"/>
+        </div>
+      </div>
+    </div>
+    <img class="container chart1 d-flex justify-content-center my-5" style="height: 50%; width: 50%; border-radius: 30px;" src="<%= chart %>">
+    <a href="states" class="container btn btn-success d-flex justify-content-center my-5" style="width:50%;">View State wise data</a>
+    <%- include('footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <style>
+    .chart1:hover{
+      transform: scale(1.2);
+    }
+    .card1:hover {
+      transform: scale(1.2);
+    }
+    .card{
+      text-align: center;
+      font-weight: bold;
+    }
+    .card-title{
+      font-weight: bold;
+    }
+    .card1 div:hover {
+      background-color: black;
+    }
+    .card2:hover {
+      transform: scale(1.2);
+    }
+    .card2 div:hover {
+      background-color: black;
+    }
+    .card3:hover {
+      transform: scale(1.2);
+    }
+    .card3 div:hover {
+      background-color: black;
+    }
+    .card4:hover {
+      transform: scale(1.2);
+    }
+    .card4 div:hover {
+      background-color: black;
+    }
+    </style>
+  </body>
+</html>
